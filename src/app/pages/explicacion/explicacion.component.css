@@ -1,0 +1,4 @@
+p {
+  border-top: 2px solid var(--color-gray-light);
+  padding-top: 2px;
+}

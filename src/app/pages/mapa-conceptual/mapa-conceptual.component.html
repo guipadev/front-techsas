@@ -1,0 +1,81 @@
+<div class="map-container">
+  <div class="title">
+    <i class="fas fa-book"></i>
+    <h1>Mapa conceptual</h1>
+  </div>
+  <div class="map-content">
+    <p class="content-text">
+      How can I structure the body of the literature review?
+    </p>
+    <div class="content-box">
+      <p>
+        Depending on the length of the review and on its purposes, you can
+        organize your literature review using different approaches. You can
+        choose one of the following methodologies or you can combine them but
+        congruently.
+      </p>
+      <p class="approaches-title">
+        Click on the icons below to listen to the descriptions of the
+        approaches.
+      </p>
+    </div>
+
+    <div class="btnMapBefore">
+      <p
+        class="m-0 p-1 text-xl"
+        [ngClass]="{ clicked: isClicked }"
+        (click)="toggleText()"
+      >
+        <strong>Chronological or historical approach:</strong> review within a
+        period of time.
+      </p>
+      <div class="text2" *ngIf="showText">
+        <p class="parrafo">
+          This methodology is about tracing the development of the topics or
+          theories over time. You need to explain and interpret this development
+          by analyzing patterns, turning points and key debates that have shaped
+          the direction of the field.
+        </p>
+        <p class="parrafo">
+          For the review, it is important to set a starting date, year or period
+          and justify the choice of this period.
+        </p>
+        <p class="parrafo">
+          This chronological approach is related to a historical one since it
+          focuses on examining research throughout a period of time, often
+          starting with the first time an issue, concept, theory, phenomena
+          emerged in the literature, then tracing its evolution within the
+          scholarship of a discipline. The purpose is to place research in a
+          historical context to show familiarity with state-of-the-art
+          developments and to identify the likely directions for future
+          research.
+        </p>
+      </div>
+    </div>
+
+    <div class="btnMapBefore">
+      <p
+        class="m-0 p-1 text-xl"
+        [ngClass]="{ clicked: isClicked }"
+        (click)="toggleText2()"
+      >
+        <strong>Thematic approach:</strong> review organized in themes and
+        concepts.
+      </p>
+      <div class="text2" *ngIf="showText2">
+        <p class="parrafo">
+          With this methodology, you can organize the literature review into
+          several subsections to address the different themes, concepts and
+          aspects of your topics, but you have to be careful not to just make a
+          list of themes; the presentation of the research must respond to an
+          organizational pattern in order to attain connections.
+        </p>
+        <p class="parrafo">
+          The thematic approach can also be developed along with the
+          chronological approach to account for the progression of time of the
+          different themes.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

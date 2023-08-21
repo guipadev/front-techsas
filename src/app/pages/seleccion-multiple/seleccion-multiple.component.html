@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="title">
+    <i class="fas fa-book"></i>
+    <h1>Seleccion multiple</h1>
+  </div>
+  <div class="flex flex-col mt-2 text-justify">
+    <p class="peper">¿Capital de Colombia?</p>
+    <form action="" method="post" target="_blank" (submit)="submitForm($event)">
+      <p>
+        <input
+          type="radio"
+          name="capital"
+          value="bogota"
+          (change)="enableSubmitButton()"
+          [disabled]="showFeedback"
+        />
+        Bogota D.C.
+        <br />
+        <input
+          type="radio"
+          name="capital"
+          value="mexico"
+          (change)="enableSubmitButton()"
+          [disabled]="showFeedback"
+        />
+        Mexico Distrito Federal
+        <br />
+        <input
+          type="radio"
+          name="capital"
+          value="chile"
+          (change)="enableSubmitButton()"
+          [disabled]="showFeedback"
+        />
+        Santiago de Chile
+      </p>
+      <input
+        class="boton"
+        type="submit"
+        value="Enviar"
+        [disabled]="!submitButtonEnabled"
+        *ngIf="!showFeedback"
+      />
+    </form>
+    <p class="respuesta" *ngIf="showFeedback">{{ feedbackMessage }}</p>
+
+    <button
+      class="boton-retroalimentacion"
+      *ngIf="showFeedback"
+      (click)="mostrarMensajeRetroalimentacion()"
+    >
+      Ver retroalimentación
+    </button>
+    <app-modal
+      *ngIf="showMensajeRetroalimentacion"
+      (close)="closeRetroalimentacionModal()"
+    >
+    </app-modal>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <aside class="col-1 sidebar">
+      <ul>
+        <ul class="toggle-link" (click)="toggleIntroduccion()">
+          <p
+            class="intro"
+            [class.active]="
+              activeOption === 'actividad1' || activeOption === 'actividad2'
+            "
+          >
+            Introducción
+          </p>
+          <li
+            *ngIf="showIntroduccion"
+            (click)="setActiveOption('actividad1')"
+            [class.active]="activeOption === 'actividad1'"
+            routerLink="/mapa-conceptual"
+          >
+            <p class="linki">Actividad 1</p>
+          </li>
+          <li
+            *ngIf="showIntroduccion"
+            (click)="setActiveOption('actividad2')"
+            [class.active]="activeOption === 'actividad2'"
+            routerLink="/seleccion-multiple"
+          >
+            <p class="linki">Actividad 2</p>
+          </li>
+        </ul>
+        <li
+          (click)="setActiveOption('explicacion')"
+          [class.active]="activeOption === 'explicacion'"
+          routerLink="/explicacion"
+        >
+          <p class="linki">Explicación</p>
+        </li>
+      </ul>
+    </aside>
+    <section class="col-11 content">
+      <router-outlet></router-outlet>
+    </section>
+  </div>
+</div>

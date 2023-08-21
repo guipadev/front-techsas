@@ -1,0 +1,47 @@
+:root {
+  --color-blue: #005883;
+  --color-white: #ffff;
+  --color-yellow: #f0b429;
+  --color-orange: #f47920;
+  --color-black: #000000de;
+  --color-gray: #e5e7eb;
+  --color-gray-light: #b5b6b867;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Franklin Gothic Book, Arial Narrow, Arial, sans-serif;
+  margin: 0;
+}
+
+.row {
+  flex-wrap: nowrap;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  margin: 20px;
+}
+
+h1 {
+  color: var(--color-blue);
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.fa-book {
+  font-size: 2em;
+  color: var(--color-yellow);
+}
+
+.title {
+  display: inline-flex;
+  align-items: center;
+}
+
+.title i {
+  margin-right: 10px;
+}
